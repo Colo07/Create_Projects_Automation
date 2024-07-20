@@ -37,8 +37,12 @@ def create_basic_files(project_path):
     print(".gitignore creado.")
     
     with open(os.path.join(project_path, "requirements.txt"), "w") as f:
-        f.write("# Agrega tus dependencias aquí\n")
+        f.write("# Agregar dependencias\n")
     print("requirements.txt creado.")
+
+    with open(os.path.join(project_path, "activateVenv.txt"), "w") as f:
+        f.write("# ejecute para activar el entorno virtual: venv\\Scripts\\activate")
+    print("activaVenv.txt creado.")
 
 # Instalar dependencias comunes
 def install_dependencies(project_path):
